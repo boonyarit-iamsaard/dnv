@@ -22,7 +22,7 @@ const Home: NextPage = () => {
             alt="Welcome to Dragonfly Naturist Village"
             className="-z-10 object-cover"
           />
-          <div className="w-full max-w-screen-sm space-y-4">
+          <div className="w-full max-w-screen-sm space-y-4 px-4 md:px-0">
             <p>Welcome to</p>
             <h1 className="font-serif text-4xl font-bold uppercase">
               Dragonfly Naturist Village

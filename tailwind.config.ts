@@ -9,6 +9,11 @@ export default {
         sans: ['var(--font-open-sans)', ...fontFamily.sans],
         serif: ['var(--font-playfair-display)', ...fontFamily.serif],
       },
+      screens: {
+        sm: '600px',
+        md: '900px',
+        lg: '1200px',
+      },
     },
   },
   plugins: [],
