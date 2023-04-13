@@ -3,6 +3,8 @@ import { type FC, type PropsWithChildren } from 'react';
 import { cn } from '@/utils/class-names';
 import { openSans, playfairDisplay } from '@/utils/fonts';
 
+import { Header } from './header';
+
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
@@ -12,6 +14,7 @@ export const Layout: FC<PropsWithChildren> = ({ children }) => {
         'relative font-sans'
       )}
     >
+      <Header />
       <main>{children}</main>
     </div>
   );
