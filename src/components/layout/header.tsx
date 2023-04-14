@@ -1,16 +1,19 @@
 import { useEffect, useState, type FC } from 'react';
 
+import { IconMenu2, IconX } from '@tabler/icons-react';
 import Link from 'next/link';
 
+import { useLayoutStore } from '@/store/layout';
 import { cn } from '@/utils/class-names';
 import { debounce } from '@/utils/debounce';
-import { IconMenu2, IconX } from '@tabler/icons-react';
 
 export const Header: FC = () => {
-  const [opened, setOpened] = useState(false);
-  const [transparent, setTransparent] = useState(true);
-  const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  const {
+    header: { setTransparent, setVisible, transparent, visible },
+    drawer: { opened, open, close },
+  } = useLayoutStore();
 
   const handleScroll = debounce(
     () => {
@@ -58,7 +61,7 @@ export const Header: FC = () => {
         </Link>
         <button
           type="button"
-          onClick={() => setOpened(!opened)}
+          onClick={() => (opened ? close() : open())}
           className={cn(
             'z-30 rounded-full p-2 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2',
             transparent
