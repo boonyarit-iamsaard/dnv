@@ -20,10 +20,6 @@ export const LINKS = [
     href: '/membership',
   },
   {
-    name: 'Contact',
-    href: '/contact',
-  },
-  {
     name: 'About',
     href: '/about',
   },
