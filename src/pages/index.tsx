@@ -4,14 +4,13 @@ import Image from 'next/image';
 import welcome from '@/assets/images/welcome.jpg';
 import { cn } from '@/utils/class-names';
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   const sections = [
     'Introduction',
     'Rooms',
     'Facilities',
     'Services',
     'Membership',
-    'Contact',
   ];
 
   return (
@@ -51,4 +50,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default HomePage;
