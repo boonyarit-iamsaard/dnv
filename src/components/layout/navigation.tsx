@@ -68,16 +68,16 @@ export const Navigation: FC = () => {
   } = useLayoutStore();
   const { width } = useWindowSize();
 
-  const smallScreen = width && width < 900;
+  const largeScreen = !!width && width >= 900;
   const navigationList = (
     <NavigationList opened={opened} transparent={transparent} />
   );
 
-  return smallScreen ? (
+  return largeScreen ? (
+    <LargeScreenNavigation>{navigationList}</LargeScreenNavigation>
+  ) : (
     <SmallScreenNavigation opened={opened}>
       {navigationList}
     </SmallScreenNavigation>
-  ) : (
-    <LargeScreenNavigation>{navigationList}</LargeScreenNavigation>
   );
 };
