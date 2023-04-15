@@ -3,6 +3,7 @@ import { type FC } from 'react';
 import Image from 'next/image';
 
 import welcome from '@/assets/images/welcome.jpg';
+import { AnimateFadeIn, AnimateInView } from '@/components/animate';
 
 export const Welcome: FC = () => {
   return (
@@ -13,12 +14,16 @@ export const Welcome: FC = () => {
         alt="Welcome to Dragonfly Naturist Village"
         className="-z-10 object-cover"
       />
-      <div className="w-full max-w-screen-lg space-y-4 px-4 md:px-0">
-        <p>Welcome to</p>
-        <h1 className="font-serif text-4xl font-bold uppercase tracking-widest">
-          Dragonfly Naturist Village
-        </h1>
-      </div>
+      <AnimateInView>
+        <AnimateFadeIn>
+          <div className="w-full max-w-screen-lg space-y-4 px-4 md:px-0">
+            <p className="uppercase md:text-xl">Welcome to</p>
+            <h1 className="font-serif text-4xl font-bold uppercase tracking-widest">
+              Dragonfly Naturist Village
+            </h1>
+          </div>
+        </AnimateFadeIn>
+      </AnimateInView>
     </section>
   );
 };
