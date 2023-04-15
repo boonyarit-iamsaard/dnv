@@ -2,6 +2,7 @@ import { useEffect, useState, type FC } from 'react';
 
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import { useWindowSize } from '@/hooks/use-window-size';
 import { useLayoutStore } from '@/store/layout';
@@ -13,6 +14,7 @@ import { Navigation } from './navigation';
 export const Header: FC = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
+  const { events } = useRouter();
   const {
     header: { setTransparent, setVisible, transparent, visible },
     drawer: { opened, open, close },
@@ -61,6 +63,18 @@ export const Header: FC = () => {
       close();
     }
   }, [largeScreen, close]);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      close();
+    };
+
+    events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [events, close]);
 
   return (
     <header
