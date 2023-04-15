@@ -1,14 +1,14 @@
 import {
-  Open_Sans as OpenSans,
-  Playfair_Display as PlayfairDisplay,
+  Noto_Sans_Display as NotoSansDisplay,
+  Noto_Serif_Display as NotoSerifDisplay,
 } from 'next/font/google';
 
-export const playfairDisplay = PlayfairDisplay({
+export const notoSansDisplay = NotoSansDisplay({
   subsets: ['latin'],
-  variable: '--font-playfair-display',
+  variable: '--font-noto-sans-display',
 });
 
-export const openSans = OpenSans({
+export const notoSerifDisplay = NotoSerifDisplay({
   subsets: ['latin'],
-  variable: '--font-open-sans',
+  variable: '--font-noto-serif-display',
 });

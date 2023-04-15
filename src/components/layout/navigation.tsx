@@ -47,7 +47,7 @@ const NavigationList: FC<Pick<NavigationProps, 'opened' | 'transparent'>> = ({
           <Link
             href={href}
             className={cn(
-              "relative block px-4 py-2 font-semibold uppercase leading-none after:absolute after:inset-x-4 after:bottom-0 after:block after:h-[0.125rem] after:scale-x-0 after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:after:scale-x-100 focus:after:scale-x-100",
+              "relative block px-4 py-2 uppercase leading-none after:absolute after:inset-x-4 after:bottom-0 after:block after:h-[0.125rem] after:scale-x-0 after:transition-all after:duration-300 after:ease-in-out after:content-[''] hover:after:scale-x-100 focus:after:scale-x-100",
               opened || transparent
                 ? 'text-white after:bg-white'
                 : 'text-black after:bg-black'

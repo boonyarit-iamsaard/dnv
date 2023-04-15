@@ -104,7 +104,7 @@ export const Footer: FC = () => {
       <div className="flex h-16 items-center bg-slate-900 text-sm text-slate-400">
         <div className="mx-auto flex w-full max-w-screen-lg flex-col items-center justify-center px-4 sm:flex-row sm:justify-between sm:px-8">
           <p>&#64;Dragonfly Naturist Village. All rights reserved.</p>
-          <p className="text-xs sm:text-sm">
+          <p>
             Made with ❤️ by{' '}
             <Link
               href="https://github.com/boonyarit-iamsaard"

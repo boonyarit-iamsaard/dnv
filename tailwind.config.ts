@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-open-sans)', ...fontFamily.sans],
-        serif: ['var(--font-playfair-display)', ...fontFamily.serif],
+        sans: ['var(--font-noto-sans-display)', ...fontFamily.sans],
+        serif: ['var(--font-noto-serif-display)', ...fontFamily.serif],
       },
       screens: {
         sm: '600px',
