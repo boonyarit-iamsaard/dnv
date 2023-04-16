@@ -15,6 +15,9 @@ export default {
         lg: '1200px',
       },
     },
+    supports: {
+      'backdrop-blur-md': 'backdrop-filter: blur(12px)',
+    },
   },
   plugins: [],
 } satisfies Config;
