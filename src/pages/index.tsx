@@ -1,16 +1,17 @@
 import { motion } from 'framer-motion';
 import { type NextPage } from 'next';
 
-import { Introduction, Welcome } from '@/components/home';
+import { Introduction, OurRooms, Welcome } from '@/components/home';
 import { cn } from '@/utils/class-names';
 
 const HomePage: NextPage = () => {
-  const sections = ['Rooms', 'Facilities', 'Services', 'Membership'];
+  const sections = ['Facilities', 'Services', 'Membership'];
 
   return (
     <>
       <Welcome />
       <Introduction />
+      <OurRooms />
       {sections.map((section, index) => (
         <section
           key={section}
