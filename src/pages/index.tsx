@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { type NextPage } from 'next';
 
-import { Introduction, OurRooms, Welcome } from '@/components/home';
+import { AboutUs, OurRooms, Welcome } from '@/components/home';
 import { cn } from '@/utils/class-names';
 
 const HomePage: NextPage = () => {
@@ -10,7 +10,7 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Welcome />
-      <Introduction />
+      <AboutUs />
       <OurRooms />
       {sections.map((section, index) => (
         <section
