@@ -1,8 +1,8 @@
 import { useEffect, useState, type FC } from 'react';
-
-import { IconMenu2, IconX } from '@tabler/icons-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
+import { IconMenu2, IconX } from '@tabler/icons-react';
 
 import { useWindowSize } from '@/hooks/use-window-size';
 import { useLayoutStore } from '@/store/layout';

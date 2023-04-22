@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
 import { type NextPage } from 'next';
+
+import { motion } from 'framer-motion';
 
 import { AboutUs, OurRooms, Welcome } from '@/components/home';
 import { cn } from '@/utils/class-names';

@@ -1,4 +1,5 @@
 import { type FC } from 'react';
+import Link from 'next/link';
 
 import {
   IconBrandFacebook,
@@ -7,7 +8,6 @@ import {
   IconMail,
   IconPhoneCall,
 } from '@tabler/icons-react';
-import Link from 'next/link';
 
 import { LINKS } from '@/constants/links';
 
