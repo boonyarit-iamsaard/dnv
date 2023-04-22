@@ -1,8 +1,9 @@
 import { type FC } from 'react';
 import Image from 'next/image';
 
-import welcome from '@/assets/images/welcome.jpg';
 import { motion } from 'framer-motion';
+
+import welcome from '@/assets/images/welcome.jpg';
 
 export const Welcome: FC = () => {
   return (

@@ -10,6 +10,7 @@ const config = {
     '',
     // '^types$',
     // '^@/types/(.*)$',
+    '^@/assets/(.*)$',
     '^@/components/(.*)$',
     '^@/config/(.*)$',
     '^@/hooks/(.*)$',
