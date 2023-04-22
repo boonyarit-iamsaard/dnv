@@ -11,7 +11,7 @@ const config = {
     // '^types$',
     // '^@/types/(.*)$',
     '^@/components/(.*)$',
-    '^@/constants/(.*)$',
+    '^@/config/(.*)$',
     '^@/hooks/(.*)$',
     '^@/server/(.*)$',
     '^@/store/(.*)$',

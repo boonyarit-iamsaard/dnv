@@ -2,7 +2,7 @@ import { type FC } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { LINKS } from '@/constants/links';
+import { routes } from '@/config/routes';
 import { useLayoutStore } from '@/store/layout';
 import { cn } from '@/utils/class-names';
 
@@ -25,7 +25,7 @@ export const Navigation: FC = () => {
       )}
     >
       <ul className="flex flex-col items-center gap-4 md:flex-row md:gap-0">
-        {LINKS.map(({ name, href }) => (
+        {routes.map(({ name, href }) => (
           <li key={name}>
             <Link
               href={href}

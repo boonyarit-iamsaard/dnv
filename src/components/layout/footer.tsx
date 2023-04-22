@@ -9,7 +9,7 @@ import {
   IconPhoneCall,
 } from '@tabler/icons-react';
 
-import { LINKS } from '@/constants/links';
+import { routes } from '@/config/routes';
 
 const socialLinks = [
   {
@@ -53,7 +53,7 @@ export const Footer: FC = () => {
           <div className="space-y-2 lg:col-start-3">
             <h3 className="font-semibold uppercase">Quick Links</h3>
             <ul>
-              {LINKS.map(({ name, href }) => (
+              {routes.map(({ name, href }) => (
                 <li key={name}>
                   <Link
                     href={href}
