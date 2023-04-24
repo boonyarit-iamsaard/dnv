@@ -1,16 +1,11 @@
 import { type FC } from 'react';
 
-import { motion } from 'framer-motion';
+import { PageSection } from '@/components/common';
 
 export const AboutUs: FC = () => {
   return (
-    <section className="py-16 md:py-32">
-      <motion.div
-        initial={{ opacity: 0, translateY: 64 }}
-        whileInView={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 1, ease: 'easeIn' }}
-        className="mx-auto grid w-full max-w-screen-lg gap-4 px-4 md:grid-cols-2 md:gap-8 md:px-8"
-      >
+    <PageSection>
+      <div className="grid gap-4 md:grid-cols-2 md:gap-8">
         <div className="order-2 space-y-4 md:order-1">
           <div className="space-y-4 px-4 md:px-0 md:py-8">
             <h2 className="uppercase tracking-widest text-slate-500">
@@ -31,7 +26,7 @@ export const AboutUs: FC = () => {
             </p>
             <button
               type="button"
-              className="inline-flex items-center justify-center bg-black px-4 py-2 text-lg uppercase text-white ring-1 ring-slate-900 transition-all duration-300 ease-in-out hover:bg-white hover:text-slate-900"
+              className="inline-flex items-center justify-center bg-black px-4 py-2 text-lg font-semibold uppercase text-white ring-1 ring-slate-900 transition-all duration-300 ease-in-out hover:bg-white hover:text-slate-900"
             >
               Book your stay
             </button>
@@ -54,7 +49,7 @@ export const AboutUs: FC = () => {
             Enjoy the freedom of naturism in a safe and friendly environment
           </h3>
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </PageSection>
   );
 };

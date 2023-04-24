@@ -1,16 +1,11 @@
 import { type FC } from 'react';
 
-import { motion } from 'framer-motion';
+import { PageSection } from '@/components/common';
 
 export const OurRooms: FC = () => {
   return (
-    <section className="bg-slate-100 py-16 md:py-32">
-      <motion.div
-        initial={{ opacity: 0, translateY: 64 }}
-        whileInView={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 1, ease: 'easeIn' }}
-        className="mx-auto w-full max-w-screen-lg space-y-8 px-4 md:px-8"
-      >
+    <PageSection variant="white">
+      <div className="space-y-8">
         <div className="grid gap-4 md:grid-cols-2">
           <div className="space-y-4 px-4 md:px-0">
             <h2 className="uppercase tracking-widest text-slate-700">
@@ -41,7 +36,7 @@ export const OurRooms: FC = () => {
             </div>
           ))}
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </PageSection>
   );
 };

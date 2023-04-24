@@ -1,30 +1,22 @@
 import { type FC } from 'react';
-import Image from 'next/image';
-
-import { motion } from 'framer-motion';
 
 import welcome from '@/assets/images/welcome.jpg';
+import { PageSection } from '@/components/common';
 
 export const Welcome: FC = () => {
+  const backgroundImg = {
+    src: welcome,
+    alt: 'Welcome to Dragonfly Naturist Village',
+  };
+
   return (
-    <section className="relative grid h-screen place-items-center bg-gradient-to-b from-black/75 to-black/50 text-center text-white">
-      <Image
-        src={welcome}
-        fill
-        alt="Welcome to Dragonfly Naturist Village"
-        className="-z-10 object-cover"
-      />
-      <motion.div
-        initial={{ opacity: 0, translateY: 64 }}
-        whileInView={{ opacity: 1, translateY: 0 }}
-        transition={{ duration: 1, ease: 'easeIn' }}
-        className="w-full max-w-screen-lg space-y-4 px-4 md:px-0"
-      >
-        <p className="uppercase md:text-xl">Welcome to</p>
-        <h1 className="font-serif text-4xl font-bold uppercase tracking-widest">
+    <PageSection withBackgroundImage size="full" backgroundImg={backgroundImg}>
+      <div className="space-y-4 text-center">
+        <p className="text-sm uppercase md:text-xl">Welcome to</p>
+        <h1 className="font-serif text-xl font-bold uppercase tracking-widest md:text-4xl">
           Dragonfly Naturist Village
         </h1>
-      </motion.div>
-    </section>
+      </div>
+    </PageSection>
   );
 };
