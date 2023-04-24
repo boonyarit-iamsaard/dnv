@@ -9,8 +9,8 @@ import { cn } from '@/utils/class-names';
 
 export const OurRooms: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const maxScrollWidth = useRef(0);
 
+  const maxScrollWidth = useRef(0);
   const carousel = useRef<HTMLDivElement>(null);
 
   const handlePrev = () => {
@@ -29,14 +29,19 @@ export const OurRooms: FC = () => {
     }
   };
 
-  // TODO: Each button should be hidden when the carousel is scrolled to each end or when all the items are visible
   const shouldHidden = ({ direction }: { direction: 'prev' | 'next' }) => {
-    if (!carousel.current) return false;
+    if (direction === 'prev') {
+      return activeIndex <= 0;
+    }
 
-    return direction === 'prev'
-      ? activeIndex <= 0
-      : carousel.current.offsetWidth * activeIndex >=
-          (maxScrollWidth.current ?? 0);
+    if (direction === 'next' && carousel.current?.offsetWidth) {
+      return (
+        carousel.current.offsetWidth * activeIndex >=
+        (maxScrollWidth.current ?? 0)
+      );
+    }
+
+    return false;
   };
 
   useEffect(() => {
