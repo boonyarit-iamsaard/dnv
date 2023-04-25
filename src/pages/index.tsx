@@ -1,28 +1,26 @@
 import { type NextPage } from 'next';
 
-import { AboutUs, OurRooms, Services, Welcome } from '@/components/home';
-
-import { PageSection } from '../components/common';
+import {
+  AboutUs,
+  Facilities,
+  OurRooms,
+  Services,
+  Welcome,
+} from '@/components/home';
 
 const HomePage: NextPage = () => {
-  const sections = ['Facilities', 'Membership'];
-
   return (
     <>
+      {/* variants: default, size: full, withBackgroundImage: true */}
       <Welcome />
+      {/* variant: white, size: default, withBackgroundImage: false */}
       <AboutUs />
+      {/* variant: light, size: default, withBackgroundImage: false */}
       <OurRooms />
+      {/* variant: default, size: default, withBackgroundImage: false */}
       <Services />
-
-      {sections.map((section, index) => (
-        <PageSection key={section} variant={index % 2 ? 'light' : 'white'}>
-          <div className="grid h-[50vh] place-items-center">
-            <h2 className="font-serif text-2xl font-bold uppercase">
-              {section}
-            </h2>
-          </div>
-        </PageSection>
-      ))}
+      {/* variant: white, size: default, withBackgroundImage: false */}
+      <Facilities />
     </>
   );
 };
