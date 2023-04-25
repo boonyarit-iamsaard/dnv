@@ -1,17 +1,18 @@
 import { type NextPage } from 'next';
 
-import { AboutUs, OurRooms, Welcome } from '@/components/home';
+import { AboutUs, OurRooms, Services, Welcome } from '@/components/home';
 
 import { PageSection } from '../components/common';
 
 const HomePage: NextPage = () => {
-  const sections = ['Facilities', 'Services', 'Membership'];
+  const sections = ['Facilities', 'Membership'];
 
   return (
     <>
       <Welcome />
       <AboutUs />
       <OurRooms />
+      <Services />
 
       {sections.map((section, index) => (
         <PageSection key={section} variant={index % 2 ? 'light' : 'white'}>
