@@ -1,14 +1,12 @@
-import {
-  Noto_Sans_Display as NotoSansDisplay,
-  Noto_Serif_Display as NotoSerifDisplay,
-} from 'next/font/google';
+import { Playfair_Display as PlayfairDisplay, Poppins } from 'next/font/google';
 
-export const notoSansDisplay = NotoSansDisplay({
+export const playfairDisplay = PlayfairDisplay({
   subsets: ['latin'],
-  variable: '--font-noto-sans-display',
+  variable: '--font-playfair-display',
 });
 
-export const notoSerifDisplay = NotoSerifDisplay({
+export const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-noto-serif-display',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins',
 });
