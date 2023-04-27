@@ -79,9 +79,11 @@ export const Header: FC = () => {
   return (
     <header
       className={cn(
-        'fixed z-10 flex h-16 w-full items-center transition-all duration-500 ease-in-out',
-        transparent ? 'bg-transparent' : 'bg-white',
-        visible ? 'top-0' : '-top-16'
+        'fixed -top-16 z-10 flex h-16 w-full items-center bg-white transition-all duration-500 ease-in-out',
+        {
+          'bg-transparent': transparent,
+          'top-0': visible,
+        }
       )}
     >
       <div className="mx-auto flex w-full max-w-screen-lg items-center justify-between px-4 md:px-8">
@@ -89,10 +91,10 @@ export const Header: FC = () => {
         <Link
           href="/"
           className={cn(
-            'block px-4 py-2 font-serif text-2xl font-bold uppercase leading-none transition-all duration-300 ease-in-out focus:outline-none focus:ring-2',
-            transparent
-              ? 'text-white hover:bg-white/20 focus:ring-white'
-              : 'text-slate-900 hover:bg-slate-100 focus:ring-slate-900'
+            'block px-4 py-2 font-serif text-2xl font-bold uppercase leading-none text-slate-900 transition-all duration-300 ease-in-out hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-900',
+            {
+              'text-white hover:bg-white/20 focus:ring-white': transparent,
+            }
           )}
         >
           DNV
@@ -106,10 +108,11 @@ export const Header: FC = () => {
           type="button"
           onClick={() => (opened ? close() : open())}
           className={cn(
-            'z-30 block rounded-full p-2 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 md:hidden',
-            transparent || opened
-              ? 'text-white hover:bg-white/20 focus:ring-white'
-              : 'text-slate-900 hover:bg-slate-100 focus:ring-slate-900'
+            'z-30 block rounded-full p-2 text-slate-900 transition-all duration-300 ease-in-out hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-900 md:hidden',
+            {
+              'text-white hover:bg-white/20 focus:ring-white':
+                transparent || opened,
+            }
           )}
         >
           <span className="sr-only">Toggle menu</span>
