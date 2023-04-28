@@ -3,6 +3,7 @@ import { type NextPage } from 'next';
 import {
   AboutUs,
   Facilities,
+  Memberships,
   OurRooms,
   Services,
   Welcome,
@@ -21,6 +22,8 @@ const HomePage: NextPage = () => {
       <Services />
       {/* variant: white, size: default, withBackgroundImage: false */}
       <Facilities />
+      {/* variant: light, size: default, withBackgroundImage: false */}
+      <Memberships />
     </>
   );
 };
