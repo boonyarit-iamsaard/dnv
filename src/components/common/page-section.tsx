@@ -10,8 +10,8 @@ const section = cva(
     variants: {
       variant: {
         default: 'bg-transparent',
-        white: 'bg-white hover:bg-slate-100',
-        light: 'bg-slate-200 hover:bg-slate-300',
+        white: 'bg-slate-100',
+        light: 'bg-slate-200',
       },
       size: {
         default: 'py-16 md:py-24',
